@@ -1,0 +1,2 @@
+# BitOR
+c MakeWallpaperEffective() ;~  DllCall("user32.dll", "", "UpdatePerUserSystemParameters")  ; Obsolete     Local $SPI_SETDESKWALLPAPER = 0x14     Local $SPIF_UPDATEINIFILE = 0x1     Local $SPIF_SENDCHANGE = 0x2     DllCall("user32.dll", _     "int", "SystemParametersInfo", _     "int", $SPI_SETDESKWALLPAPER, _     "int", 0, _     "str", RegRead("HKCU\Control Panel\Desktop", "Wallpaper"), _     "int", BitOR($SPIF_UPDATEINIFILE, $SPIF_SENDCHANGE)) EndFunc
